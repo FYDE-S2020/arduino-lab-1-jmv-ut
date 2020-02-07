@@ -24,17 +24,6 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);
 }
 
-void dimmer(int freq, int duty) {
-    int period, onTime, offTime;
-    period = 1000/freq;
-    onTime = period * duty / 100;
-    offTime = period - onTime;
-    digitalWrite(LED_PIN, HIGH);
-    delay(onTime);
-    digitalWrite(LED_PIN, LOW);
-    delay(offTime);
-}
-
 void timedBlink(int interval) {
   digitalWrite(LED_PIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(interval);                       // wait for a second
@@ -42,9 +31,24 @@ void timedBlink(int interval) {
   delay(interval);                       // wait for a second
 }
 
+void dimmer(int freq, int duty) {
+  int period, onTime, offTime;
+  period = 1000/freq;
+  onTime = period * duty / 100;
+  offTime = period - onTime;
+  digitalWrite(LED_PIN, HIGH);
+  delay(onTime);
+  digitalWrite(LED_PIN, LOW);
+  delay(offTime);
+}
+
 // the loop function runs over and over again forever
 void loop() {
-  timedBlink(250);
-  timedBlink(500);
-  timedBlink(1000);             
+  int freq = 100;
+  for(int i = 100; i>0; i--){
+    dimmer(freq, i);         
+  }
+  for(int j = 1; j<101; j++){
+    dimmer(freq, j);   
+  }
 }
