@@ -25,7 +25,7 @@ SPIClass *vspi = NULL;
 
 void setup()
 {
-    Serial.begin(115200);
+    Serial.begin(9600);
 
     //initialise two instances of the SPIClass attached to VSPI and HSPI respectively
     vspi = new SPIClass(VSPI);
