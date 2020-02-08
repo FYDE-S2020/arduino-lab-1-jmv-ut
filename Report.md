@@ -67,13 +67,13 @@ Because the data lines are open drain, they require the external resistors to pr
 ## Screenshots
 
 Procedure A, step 1:
-img/TimedBlink.png
+![oops](img/TimedBlink.png)
 
 Procedure A, step 4:
-img/dimmer.png
+![oops](img/dimmer.png)
 
 Procedure B, UART:
-img/UARTtest.png
+![oops](img/UARTtest.png)
 
 Procedure B, SPI:
-img/SPItest.png
+![oops](img/SPItest.png)
