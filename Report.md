@@ -2,7 +2,7 @@ Name: Jonathan Voss
 
 EID: jmv3323
 
-Team Number: F3
+Team Number: F4
 
 ## Questions
 
@@ -43,7 +43,7 @@ Team Number: F3
 
 9. Why is SPI so much faster than UART?
 
-    SPI makes use of more wires and is synchronized, meaning that the data can much faster and on its own line, seperate from start and stopp commands.
+    SPI makes use of more wires and is synchronized, meaning that the data can much faster and on its own line, not requiring and start/stop bits.
 
 10. list one pro and one con of UART
 
@@ -52,7 +52,7 @@ Con: slow and inneficient as compared to other methods.
 
 11. list one pro and one con of SPI
 
-Pro: Faster than the other forms
+Pro: Faster than the other forms (no start and stop bits)
 Con: requires more connections/hardware to run.
 
 12. list one pro and one con of I2C
